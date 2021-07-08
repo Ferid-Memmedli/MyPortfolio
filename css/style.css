@@ -1521,6 +1521,7 @@
 
 #portfolio .anbar {
   width: 83%;
+  max-width: fit-content;
   margin: 0 auto;
   display: -ms-grid;
   display: grid;

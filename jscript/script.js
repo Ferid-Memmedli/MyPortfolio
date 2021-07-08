@@ -189,17 +189,6 @@ webdesign.addEventListener('click', function () {
     };
 });
 
-work.addEventListener('click', function () {
-    for (let i = 0; i < qutu.length; i++) {
-        let id = qutu[i].getAttribute('data-id');
-        if (id != 1) {
-            qutu[i].style.display = 'none';
-        } else {
-            qutu[i].style = 'block';
-        }
-    };
-});
-
 worpres.addEventListener('click', function () {
     for (let i = 0; i < qutu.length; i++) {
         let id = qutu[i].getAttribute('data-id');
@@ -210,16 +199,6 @@ worpres.addEventListener('click', function () {
         }
     };
 });
-
-
-// ---------------------------Formdan melumat goturmeq-------------------------------------
-// const form = document.forms[0];
-
-// form.addEventListener("submit", function (event) {
-//     event.preventDefault();
-//     const { name, email, subject, comments } = this.elements;
-//     console.log(name.value, email.value, subject.value, comments.value);
-// });
 
 const form = document.forms[0];
 
