@@ -1,0 +1,17 @@
+#freelancer {
+    @include defaultmain($full-faiz, none);
+    div {
+        .divfree {
+            h2 {
+                letter-spacing: 1px;
+                @include font-size-weig-align-liheig(30px, 600, center, 1.8);
+            }
+        }
+        .divhire {
+            button {
+                letter-spacing: 1px;
+                @include font-size-weig-align-liheig(15px, 600, center, none);
+            }
+        }
+    }
+}

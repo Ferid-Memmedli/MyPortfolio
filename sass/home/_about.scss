@@ -1,0 +1,55 @@
+#about {
+  @include defaultmain($full-faiz, $main-height);
+  div {
+    width: $width;
+    line-height: 1.8;
+    #about-logo {
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px $main-red;
+        object-fit: cover;
+        position: relative;
+      }
+    }
+    #about-metn {
+      display: flex;
+      flex-direction: column;
+      h2 {
+        letter-spacing: 1px;
+        @include font-size-weig-align-liheig(32px, 700, left, 1);
+        span {
+          font-weight: 500;
+        }
+      }
+      h4 {
+        @include font-size-weig-align-liheig(25px, 500, none, none);
+        span {
+          font-weight: 500;
+        }
+      }
+      p {
+        font-family: $font-family;
+      }
+      ul {
+        a {
+          color: $color-black;
+          display: inline-block;
+          height: 40px;
+          width: 40px;
+          border-radius: $full-faiz/2;
+          border: 2px solid #d4d4d4;
+          line-height: 39px;
+          transition: all 0.6s;
+          text-align: center;
+          &:hover {
+            color : $main-red;
+            border: 2px solid $main-red;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+// section servies
+#servies {
+    @include defaultmain($full-faiz, none);
+    h2 {
+        letter-spacing: 1px;
+        @include font-size-weig-align-liheig(2rem, none, center, none);
+    }
+    p {
+        max-width: 500px;
+        margin: 10px auto;
+        @include font-size-weig-align-liheig(1rem, 400, center, 1.8);
+    }
+    .container {
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            .col-4 {
+                width: 350px;
+                div img {
+                    height: 40px;
+                }
+                h4 {
+                    letter-spacing: 1px;
+                    @include font-size-weig-align-liheig(180%, none, center, none);
+                    color: $color-black;
+                }
+                .services {
+                    height: 2px;
+                    width: 40px;
+                    margin: 15px auto;
+                    transition: all 0.5s ease;
+                    background-color: $main-red;
+                }
+                p {
+                    text-align: center;
+                    color: $main-pp;
+                }
+                &:hover {
+                    .services {
+                        width: 60px;
+                    }
+                }
+            }
+        }
+    }
+}
