@@ -1218,8 +1218,8 @@
 }
 
 #about div #about-logo img {
-  width: 100%;
-  height: auto;
+  max-width: 500px;
+  max-height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
