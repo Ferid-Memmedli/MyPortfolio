@@ -92,73 +92,10 @@ job.forEach(i => {
         e.target.classList.add('active');
     });
 });
-//-----------------------------------Ovarlay-----------------------------------------------
-function galery(bu) {
-    let qaralti = document.createElement('div');
-    qaralti.className = 'qaralti';
-    document.body.appendChild(qaralti);
-    //------------------------galery imgs ekrana verilmesi----------------------------
-    let sekil = document.querySelector('.sekil');
-    let src = bu.querySelector('img').getAttribute('src');
-    sekil.setAttribute('src', src);
-    let albom = document.querySelector(".albom");
-    let sol = document.getElementById('sol');
-    let sag = document.getElementById('sag');
-    albom.style.display = "inline-block";
-    sol.style.display = 'inline-block';
-    sag.style.display = 'inline-block';
-    // //-------------------------Galery baglamaq------------------------------
-    qaralti.addEventListener('click', function () {
-        qaralti.remove();
-        albom.style.display = 'none';
-        sol.style.display = 'none';
-        sag.style.display = 'none';
-    });
-    let bagla = document.getElementById("bagla");
-    bagla.addEventListener('click', function () {
-        qaralti.remove();
-        albom.style.display = 'none';
-        sol.style.display = 'none';
-        sag.style.display = 'none';
-    });
-}
-//-------------------------Galery saga sola cevirmeq-------------------------
-function prev() {
-    let sekil = document.querySelector('.sekil');
-    let src = sekil.getAttribute('src');
-    let sldrs = ["img/work/1.jpg", "img/work/2.jpg", "img/work/3.jpg", "img/work/4.jpg", "img/work/5.jpg", "img/work/6.jpg"];
-    if (src == sldrs[0]) {
-        sekil.setAttribute('src', sldrs.slice(-1));
-    }
-    else {
-        for (let i = 0; i < sldrs.length; i++) {
-            if (src == sldrs[i]) {
-                sekil.setAttribute('src', sldrs[i - 1]);
-            }
-        }
-    }
-};
-function next() {
-    let sekil = document.querySelector('.sekil');
-    let src = sekil.getAttribute('src');
-    let sldrs = ["img/work/1.jpg", "img/work/2.jpg", "img/work/3.jpg", "img/work/4.jpg", "img/work/5.jpg", "img/work/6.jpg"];
-    if (src == sldrs.slice(-1)) {
-        sekil.setAttribute('src', sldrs[0]);
-    }
-    else {
-        for (let i = 0; i < sldrs.length; i++) {
-            if (src == sldrs[i]) {
-                sekil.setAttribute('src', sldrs[i + 1]);
-            }
-        }
-    }
-};
 //-----------------------------Filter galery------------------------------------
 let all = document.querySelector('#all');
 let seo = document.querySelector('#seo');
 let webdesign = document.querySelector('#webdesign');
-let work = document.querySelector('#work');
-let worpres = document.querySelector('#worpres');
 let qutu = document.querySelectorAll('.qutu');
 
 all.addEventListener('click', function () {
@@ -182,17 +119,6 @@ webdesign.addEventListener('click', function () {
     for (let i = 0; i < qutu.length; i++) {
         let id = qutu[i].getAttribute('data-id');
         if (id != 3) {
-            qutu[i].style.display = 'none';
-        } else {
-            qutu[i].style = 'block';
-        }
-    };
-});
-
-worpres.addEventListener('click', function () {
-    for (let i = 0; i < qutu.length; i++) {
-        let id = qutu[i].getAttribute('data-id');
-        if (id != 4) {
             qutu[i].style.display = 'none';
         } else {
             qutu[i].style = 'block';
