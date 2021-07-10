@@ -1717,7 +1717,7 @@
   display: grid;
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
-  -ms-grid-columns: (1fr)[3];
+  -ms-grid-columns: (1fr);
       grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
@@ -1994,6 +1994,10 @@ html {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       gap: 40px;
+  }
+  .elaqeler {
+    flex-direction: column;
+    align-items: center;
   }
 }
 /*# sourceMappingURL=style.css.map */
